@@ -26,12 +26,12 @@ To store data use:
 $storage->setVar("[name to use for identifying the data goes here]", [the data to store goes here]);
 ```
 
-VarStore can store any serializable data. Because nearly all variables in PHP are serializable, VarStore can store nearly any PHP variable.
+VarStore can store any serializable data. Because nearly all variables in PHP are serializable, VarStore can store nearly any PHP variable. The data will be upserted (https://en.wiktionary.org/wiki/upsert). The name does not have to be a string and can be any value.
 
 To retrieve data use:
 
 ```php
-$storage->getVar([name to use for identifying the data goes here]", [default value goes here]);
+$storage->getVar("[name to use for identifying the data goes here]", [default value goes here]);
 ```
 
 An important concept in VarStore is that a default value must always be provided when retrieving data. This default value will be used in cases where the value is not yet set or cannot be retrieved.
